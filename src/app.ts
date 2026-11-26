@@ -1,16 +1,16 @@
 import express, {
-    type ErrorRequestHandler,
-    type RequestHandler,
+  type ErrorRequestHandler,
+  type RequestHandler,
 } from "express";
 import swaggerUi from "swagger-ui-express";
 import { z } from "zod";
 import { openApiDocument } from "./openapi.js";
 import {
-    getVendor,
-    listCoas,
-    listPeptides,
-    listVendors,
-    vendorQuerySchema,
+  getVendor,
+  listCoas,
+  listPeptides,
+  listVendors,
+  vendorQuerySchema,
 } from "./repository.js";
 
 const idParam = z.string().trim().min(1).max(50);
@@ -40,6 +40,7 @@ export function createApp() {
   app.use("/docs", swaggerUi.serve, swaggerUi.setup(openApiDocument));
 
   app.get("/peptides", (_req, res) => {
+    // List all peptides
     res.json({ data: listPeptides() });
   });
 

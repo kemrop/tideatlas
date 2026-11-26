@@ -35,25 +35,28 @@ PORT=8080 npm run dev
 
 ## Other scripts
 
-| Command             | Description                      |
-| ------------------- | -------------------------------- |
-| `npm test`          | Run the test suite (Vitest)      |
-| `npm run typecheck` | Type-check without emitting      |
-| `npm run build`     | Compile TypeScript to `dist/`    |
+| Command             | Description                                             |
+| ------------------- | ------------------------------------------------------- |
+| `npm test`          | Run the test suite (Vitest)                             |
+| `npm run typecheck` | Type-check without emitting                             |
+| `npm run build`     | Compile TypeScript to `dist/`                           |
+| `npm run lint`      | Check lint and formatting (Biome)                       |
+| `npm run lint:ci`   | Same check as CI; fails on any lint or formatting issue |
+| `npm run fix`       | Auto-fix lint issues and format code                    |
 
 ## API
 
 Interactive Swagger UI is available at `http://localhost:3000/docs`, and the raw OpenAPI document at `/openapi.json`.
 
-| Endpoint                         | Description                                           |
-| -------------------------------- | ----------------------------------------------------- |
-| `GET /docs`                      | Swagger UI                                            |
-| `GET /openapi.json`              | OpenAPI 3 document                                    |
-| `GET /health`                    | Health check                                          |
-| `GET /peptides`                  | List peptides                                         |
-| `GET /vendors`                   | List vendors (paginated)                              |
-| `GET /vendors/:id`               | Get a single vendor                                   |
-| `GET /vendors/:id/coas`          | List a vendor's COAs; optional `peptide` query filter |
+| Endpoint                | Description                                           |
+| ----------------------- | ----------------------------------------------------- |
+| `GET /docs`             | Swagger UI                                            |
+| `GET /openapi.json`     | OpenAPI 3 document                                    |
+| `GET /health`           | Health check                                          |
+| `GET /peptides`         | List peptides                                         |
+| `GET /vendors`          | List vendors (paginated)                              |
+| `GET /vendors/:id`      | Get a single vendor                                   |
+| `GET /vendors/:id/coas` | List a vendor's COAs; optional `peptide` query filter |
 
 `GET /vendors` query parameters:
 
