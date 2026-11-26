@@ -9,6 +9,7 @@
     "start": "node dist/server.js",
     "typecheck": "tsc --noEmit",
     "lint": "biome check .",
+    "lint:ci": "biome ci --error-on-warnings .",
     "fix": "biome check --write ."
   },
   "license": "ISC",

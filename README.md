@@ -35,13 +35,14 @@ PORT=8080 npm run dev
 
 ## Other scripts
 
-| Command             | Description                          |
-| ------------------- | ------------------------------------ |
-| `npm test`          | Run the test suite (Vitest)          |
-| `npm run typecheck` | Type-check without emitting          |
-| `npm run build`     | Compile TypeScript to `dist/`        |
-| `npm run lint`      | Check lint and formatting (Biome)    |
-| `npm run fix`       | Auto-fix lint issues and format code |
+| Command             | Description                                             |
+| ------------------- | ------------------------------------------------------- |
+| `npm test`          | Run the test suite (Vitest)                             |
+| `npm run typecheck` | Type-check without emitting                             |
+| `npm run build`     | Compile TypeScript to `dist/`                           |
+| `npm run lint`      | Check lint and formatting (Biome)                       |
+| `npm run lint:ci`   | Same check as CI; fails on any lint or formatting issue |
+| `npm run fix`       | Auto-fix lint issues and format code                    |
 
 ## API
 
