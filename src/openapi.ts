@@ -89,7 +89,8 @@ export const openApiDocument = {
           {
             name: "hasCoa",
             in: "query",
-            description: "Filter by COA availability (coaAvailability is not \"none\")",
+            description:
+              'Filter by COA availability (coaAvailability is not "none")',
             schema: { type: "string", enum: ["true", "false"] },
           },
           {

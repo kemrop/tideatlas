@@ -23,7 +23,8 @@ export function listVendors(query: VendorQuery): Page<Vendor> {
       (!q || v.name.toLowerCase().includes(q)) &&
       (!query.peptide || v.peptideIds.includes(query.peptide)) &&
       (!query.country || v.country === query.country) &&
-      (query.hasCoa === undefined || (v.coaAvailability !== "none") === query.hasCoa),
+      (query.hasCoa === undefined ||
+        (v.coaAvailability !== "none") === query.hasCoa),
   );
   const start = (query.page - 1) * query.limit;
   return {

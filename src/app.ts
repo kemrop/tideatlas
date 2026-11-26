@@ -1,16 +1,16 @@
 import express, {
-    type ErrorRequestHandler,
-    type RequestHandler,
+  type ErrorRequestHandler,
+  type RequestHandler,
 } from "express";
 import swaggerUi from "swagger-ui-express";
 import { z } from "zod";
 import { openApiDocument } from "./openapi.js";
 import {
-    getVendor,
-    listCoas,
-    listPeptides,
-    listVendors,
-    vendorQuerySchema,
+  getVendor,
+  listCoas,
+  listPeptides,
+  listVendors,
+  vendorQuerySchema,
 } from "./repository.js";
 
 const idParam = z.string().trim().min(1).max(50);
