@@ -40,7 +40,7 @@ export function createApp() {
   app.use("/docs", swaggerUi.serve, swaggerUi.setup(openApiDocument));
 
   app.get("/peptides", (_req, res) => {
-    res.json({ data: listPeptides() });
+      res.json({ data: listPeptides() });
   });
 
   app.get("/vendors", (req, res) => {
